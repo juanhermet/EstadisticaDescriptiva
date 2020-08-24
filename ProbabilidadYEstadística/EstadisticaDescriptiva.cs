@@ -63,17 +63,9 @@ namespace ProbabilidadYEstadística
             return mediana;
         }
         protected double determinarMediana(bool esPar,List<double> listaDeNumerosOrdenados)
-        {
-            double mediana;
-            if (esPar)
-            {
-                mediana = cantidadPar(listaDeNumerosOrdenados);
-            }
-            else
-            {
-                mediana = cantidadImpar(listaDeNumerosOrdenados);
-            }
-            return mediana;
+        {   
+            return (esPar) ? cantidadPar(listaDeNumerosOrdenados) :
+                cantidadImpar(listaDeNumerosOrdenados);
         }
         protected double cantidadPar(List<double> listaDeValoresOrdenados)
         {
