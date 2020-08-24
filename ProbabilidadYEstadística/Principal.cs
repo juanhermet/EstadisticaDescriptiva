@@ -44,35 +44,13 @@ namespace ProbabilidadYEstadística
             //definimos Varianzas.
             lblVarianza.Text = EstadisticaFactory.calcularVarianza(listaDeNumeros);
             lblDesvEst.Text = EstadisticaFactory.calcularDesviacionEstandar(listaDeNumeros);
-
-            setValoresVisibles();
         }
 
         private void Principal_Load(object sender, EventArgs e)
         {
-            setValoresInvisibles();
+            limpiarValores();
         }
-        private void setValoresInvisibles()
-        {
-            lblDesvEst.Visible = false;
-            lblMeda.Visible = false;
-            lblMedia.Visible = false;
-            lblMediana.Visible = false;
-            lblPrimerQ.Visible = false;
-            lblTercerQ.Visible = false;
-            lblVarianza.Visible = false;
-        }
-        private void setValoresVisibles()
-        {
-            lblDesvEst.Visible = true;
-            lblMeda.Visible = true;
-            lblMedia.Visible = true;
-            lblMediana.Visible = true;
-            lblPrimerQ.Visible = true;
-            lblTercerQ.Visible = true;
-            lblVarianza.Visible = true;
-        }
-
+       
         private void txtNumero_KeyDown(object sender, KeyEventArgs e)
         {
             if(e.KeyData == Keys.Enter)
@@ -85,13 +63,9 @@ namespace ProbabilidadYEstadística
         {
             limpiarValores();
             listaDeNumeros.Clear();
-            LimpiarListBox();
-        }
-        private void LimpiarListBox()
-        {  
-            listaDeNumeros.Clear();
             lstbxNumerosAgregados.Items.Clear();
         }
+        
         private void limpiarValores()
         {
             lblDesvEst.Text = "";
@@ -104,6 +78,4 @@ namespace ProbabilidadYEstadística
         }
         
     }
-
-    
 }

@@ -69,18 +69,14 @@ namespace ProbabilidadYEstadística
         }
         protected double cantidadPar(List<double> listaDeValoresOrdenados)
         {
-            double mediana;
-
-            mediana = (listaDeValoresOrdenados[posicionMediana()] + listaDeValoresOrdenados[posicionMediana() + 1])/2;
-      
-            return mediana;
+            return (listaDeValoresOrdenados[posicionMediana()] 
+                + listaDeValoresOrdenados[posicionMediana() + 1])/2;      
         }
        
         protected double cantidadImpar(List<double> listaDeValoresOrdenados)
         {
-            double mediana;
-            mediana = listaDeValoresOrdenados[posicionMediana()];
-            return mediana;
+            return listaDeValoresOrdenados[posicionMediana()];
+            
         }
         protected int posicionMediana()
         {
@@ -94,20 +90,13 @@ namespace ProbabilidadYEstadística
 
         public double darPrimerQuartil()
         {
-            int posicionQuartil;
-
-            posicionQuartil = (posicionMediana() + 1)/2;
-            
-            return listaDeNumeros[posicionQuartil];
+            return listaDeNumeros[(posicionMediana() + 1) / 2];
         }
         
         public double darTercerQuartil()
         {
-            int posicionQuartil;
-
-            posicionQuartil = listaDeNumeros.Count - ((posicionMediana() ) / 2)-1;
-            
-            return listaDeNumeros[posicionQuartil];
+            return listaDeNumeros
+                [listaDeNumeros.Count - ((posicionMediana()) / 2) - 1];
         }
     }
     public class Meda : Mediana
@@ -116,9 +105,10 @@ namespace ProbabilidadYEstadística
 
         public double darMeda()
         {
-            double meda;
             List<double> listaDeValoresAbsolutos = new List<double>();
+
             listaDeNumeros.Sort();
+            
             for (int numero = 0; numero < listaDeNumeros.Count; numero++)
             {
                 listaDeValoresAbsolutos.Add(valorAbsolutoEntreValorYMediana(listaDeNumeros[numero]));
@@ -126,14 +116,12 @@ namespace ProbabilidadYEstadística
 
             listaDeValoresAbsolutos.Sort();
 
-            meda = determinarMediana(Paridad.esPar(listaDeValoresAbsolutos.Count),listaDeValoresAbsolutos);
-
-            return meda;
+            return determinarMediana(Paridad.esPar(listaDeValoresAbsolutos.Count), listaDeValoresAbsolutos);
         }
        
         private double valorAbsolutoEntreValorYMediana(double numero)
         {
-        return Math.Abs(numero - darMediana());
+            return Math.Abs(numero - darMediana());
         }
     }
     public class Paridad
