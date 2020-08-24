@@ -12,9 +12,98 @@ namespace ProbabilidadYEstadística
 {
     public partial class Principal : Form
     {
+        List<double> listaDeNumeros = new List<double>();
         public Principal()
         {
             InitializeComponent();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            if(txtNumero.Text != null)
+            {
+               
+                listaDeNumeros.Add(Convert.ToDouble(txtNumero.Text));
+                lstbxNumerosAgregados.Items.Add(txtNumero.Text);
+                txtNumero.Text = "";
+                txtNumero.Focus();
+            }
+        }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            //definimos media.
+            lblMedia.Text = EstadisticaFactory.calcularPromedio(listaDeNumeros);
+            //definimos Mediana.
+            lblMediana.Text = EstadisticaFactory.calcularMediana(listaDeNumeros);
+            //definimos Quartiles.
+            lblPrimerQ.Text = EstadisticaFactory.calcularPrimerCuartil(listaDeNumeros);
+            lblTercerQ.Text = EstadisticaFactory.calcularTercerCuartil(listaDeNumeros);
+            //definimos Meda.
+            lblMeda.Text = EstadisticaFactory.calcularMeda(listaDeNumeros);
+            //definimos Varianzas.
+            lblVarianza.Text = EstadisticaFactory.calcularVarianza(listaDeNumeros);
+            lblDesvEst.Text = EstadisticaFactory.calcularDesviacionEstandar(listaDeNumeros);
+
+            setValoresVisibles();
+        }
+
+        private void Principal_Load(object sender, EventArgs e)
+        {
+            setValoresInvisibles();
+        }
+        private void setValoresInvisibles()
+        {
+            lblDesvEst.Visible = false;
+            lblMeda.Visible = false;
+            lblMedia.Visible = false;
+            lblMediana.Visible = false;
+            lblPrimerQ.Visible = false;
+            lblTercerQ.Visible = false;
+            lblVarianza.Visible = false;
+        }
+        private void setValoresVisibles()
+        {
+            lblDesvEst.Visible = true;
+            lblMeda.Visible = true;
+            lblMedia.Visible = true;
+            lblMediana.Visible = true;
+            lblPrimerQ.Visible = true;
+            lblTercerQ.Visible = true;
+            lblVarianza.Visible = true;
+        }
+
+        private void txtNumero_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyData == Keys.Enter)
+            {
+                btnAgregar_Click(sender,e);
+            }
+        }
+
+        private void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            limpiarValores();
+            listaDeNumeros.Clear();
+            LimpiarListBox();
+        }
+        private void LimpiarListBox()
+        {  
+            listaDeNumeros.Clear();
+            lstbxNumerosAgregados.Items.Clear();
+        }
+        private void limpiarValores()
+        {
+            lblDesvEst.Text = "";
+            lblMeda.Text = "";
+            lblMedia.Text = "";
+            lblMediana.Text = "";
+            lblPrimerQ.Text = "";
+            lblTercerQ.Text = "";
+            lblVarianza.Text = "";
+        }
+        
     }
+
+    
 }

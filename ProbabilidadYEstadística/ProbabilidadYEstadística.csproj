@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EstadisticaDescriptiva.cs" />
+    <Compile Include="EstadisticaFactory.cs" />
     <Compile Include="Principal.cs">
       <SubType>Form</SubType>
     </Compile>

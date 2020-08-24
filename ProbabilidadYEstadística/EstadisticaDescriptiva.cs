@@ -41,7 +41,7 @@ namespace ProbabilidadYEstadística
         }
         private double determinarVarianza(double numero)
         {
-            return Math.Pow(numero + darPromedio(), 2);
+            return Math.Pow(numero - darPromedio(), 2);
         }
         public double darDesviacionEstandar()
         {
