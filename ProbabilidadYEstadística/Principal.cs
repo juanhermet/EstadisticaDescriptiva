@@ -20,7 +20,7 @@ namespace ProbabilidadYEstadística
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            if(txtNumero.Text != null)
+            if(txtNumero.Text != "")
             {
                
                 listaDeNumeros.Add(Convert.ToDouble(txtNumero.Text));
@@ -39,11 +39,17 @@ namespace ProbabilidadYEstadística
             //definimos Quartiles.
             lblPrimerQ.Text = EstadisticaFactory.calcularPrimerCuartil(listaDeNumeros);
             lblTercerQ.Text = EstadisticaFactory.calcularTercerCuartil(listaDeNumeros);
+            lblRangoInter.Text = EstadisticaFactory.calcularRangoIntercuartil(listaDeNumeros);
             //definimos Meda.
             lblMeda.Text = EstadisticaFactory.calcularMeda(listaDeNumeros);
             //definimos Varianzas.
             lblVarianza.Text = EstadisticaFactory.calcularVarianza(listaDeNumeros);
             lblDesvEst.Text = EstadisticaFactory.calcularDesviacionEstandar(listaDeNumeros);
+            //definimos Valores Alejados.
+            lblAlejadoDef.Text = EstadisticaFactory.calcularValorAlejadoPorDefecto(listaDeNumeros);
+            lblAlejadoExc.Text = EstadisticaFactory.calcularValorAlejadoPorExceso(listaDeNumeros);
+            //definimos Coeficiente de Asimetría.
+            lblCoefAsi.Text = EstadisticaFactory.calcularCoeficienteDeAsimetria(listaDeNumeros);
         }
 
         private void Principal_Load(object sender, EventArgs e)
@@ -75,7 +81,20 @@ namespace ProbabilidadYEstadística
             lblPrimerQ.Text = "";
             lblTercerQ.Text = "";
             lblVarianza.Text = "";
+            lblRangoInter.Text = "";
+            lblAlejadoDef.Text = "";
+            lblAlejadoExc.Text = "";
+            lblCoefAsi.Text = "";
         }
-        
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
