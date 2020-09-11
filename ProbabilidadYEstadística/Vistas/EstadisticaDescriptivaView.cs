@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using ProbabilidadYEstadística.Fabricas;
 namespace ProbabilidadYEstadística
 {
-    public partial class Principal : Form
+    public partial class EstadisticaDescriptivaView : Form
     {
         List<double> listaDeNumeros = new List<double>();
-        public Principal()
+        public EstadisticaDescriptivaView()
         {
             InitializeComponent();
         }
@@ -87,14 +87,9 @@ namespace ProbabilidadYEstadística
             lblCoefAsi.Text = "";
         }
 
-        private void label12_Click(object sender, EventArgs e)
+        private void EstadisticaDescriptivaView_FormClosed(object sender, FormClosedEventArgs e)
         {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
+            Application.Exit();
         }
     }
 }

@@ -2,9 +2,11 @@ E:\proyectos subidos a GIT\ProbabilidadYEstadística\ProbabilidadYEstadística\b
 E:\proyectos subidos a GIT\ProbabilidadYEstadística\ProbabilidadYEstadística\bin\Debug\ProbabilidadYEstadística.exe
 E:\proyectos subidos a GIT\ProbabilidadYEstadística\ProbabilidadYEstadística\bin\Debug\ProbabilidadYEstadística.pdb
 E:\proyectos subidos a GIT\ProbabilidadYEstadística\ProbabilidadYEstadística\obj\Debug\ProbabilidadYEstadística.csprojAssemblyReference.cache
-E:\proyectos subidos a GIT\ProbabilidadYEstadística\ProbabilidadYEstadística\obj\Debug\ProbabilidadYEstadística.Principal.resources
 E:\proyectos subidos a GIT\ProbabilidadYEstadística\ProbabilidadYEstadística\obj\Debug\ProbabilidadYEstadística.Properties.Resources.resources
 E:\proyectos subidos a GIT\ProbabilidadYEstadística\ProbabilidadYEstadística\obj\Debug\ProbabilidadYEstadística.csproj.GenerateResource.cache
 E:\proyectos subidos a GIT\ProbabilidadYEstadística\ProbabilidadYEstadística\obj\Debug\ProbabilidadYEstadística.csproj.CoreCompileInputs.cache
 E:\proyectos subidos a GIT\ProbabilidadYEstadística\ProbabilidadYEstadística\obj\Debug\ProbabilidadYEstadística.exe
 E:\proyectos subidos a GIT\ProbabilidadYEstadística\ProbabilidadYEstadística\obj\Debug\ProbabilidadYEstadística.pdb
+E:\proyectos subidos a GIT\ProbabilidadYEstadística\ProbabilidadYEstadística\obj\Debug\ProbabilidadYEstadística.EstadisticaDescriptivaView.resources
+E:\proyectos subidos a GIT\ProbabilidadYEstadística\ProbabilidadYEstadística\obj\Debug\ProbabilidadYEstadística.PrincipalView.resources
+E:\proyectos subidos a GIT\ProbabilidadYEstadística\ProbabilidadYEstadística\obj\Debug\ProbabilidadYEstadística.VariableAleatoriaView.resources

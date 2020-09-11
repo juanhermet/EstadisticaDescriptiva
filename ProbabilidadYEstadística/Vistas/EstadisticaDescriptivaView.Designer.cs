@@ -1,6 +1,6 @@
 ﻿namespace ProbabilidadYEstadística
 {
-    partial class Principal
+    partial class EstadisticaDescriptivaView
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EstadisticaDescriptivaView));
             this.label1 = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -311,7 +312,6 @@
             this.lblCoefAsi.Size = new System.Drawing.Size(41, 13);
             this.lblCoefAsi.TabIndex = 29;
             this.lblCoefAsi.Text = "label15";
-            this.lblCoefAsi.Click += new System.EventHandler(this.label10_Click);
             // 
             // label12
             // 
@@ -321,9 +321,8 @@
             this.label12.Size = new System.Drawing.Size(124, 13);
             this.label12.TabIndex = 28;
             this.label12.Text = "Coeficiente de asimetría:";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
-            // Principal
+            // EstadisticaDescriptivaView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -357,8 +356,10 @@
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.label1);
-            this.Name = "Principal";
-            this.Text = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "EstadisticaDescriptivaView";
+            this.Text = "Estadística Descriptiva";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.EstadisticaDescriptivaView_FormClosed);
             this.Load += new System.EventHandler(this.Principal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 namespace EstadisticaDescriptivaTest
 {
     [TestFixture]
-    public class Tests
+    public class PruebasEstadistica
     {
         [Test]
         public void probarPromedio()
